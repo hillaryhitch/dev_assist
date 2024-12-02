@@ -1,0 +1,2 @@
+[console_scripts]
+dev_assist = dev_assist.cli:main

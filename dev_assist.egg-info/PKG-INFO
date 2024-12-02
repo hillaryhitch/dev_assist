@@ -1,0 +1,141 @@
+Metadata-Version: 2.1
+Name: dev-assist
+Version: 0.1.0
+Summary: A command-line AI assistant for software development
+Home-page: https://github.com/dev-assist/dev-assist
+Author: Hillary Murefu
+Author-email: hillarywang2005@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.0
+Requires-Dist: openai>=1.3.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: typer>=0.9.0
+
+# Dev Assist
+
+A command-line AI assistant for software development that brings Dev Assist's capabilities directly to your terminal.
+
+## Installation
+
+```bash
+# Install from source
+git clone https://github.com/dev-assist/dev-assist
+cd dev-assist
+pip install -e .
+
+# Or install directly using pip (once published)
+pip install dev-assist
+```
+
+## Usage
+
+After installation, you can use Dev Assist directly from your terminal:
+
+```bash
+# Ask Dev Assist for help
+dev_assist ask "Create a Python function to sort a list of dictionaries by a specific key"
+
+# Show verbose output
+dev_assist ask -v "How do I implement a binary search tree in Python?"
+
+# Configure settings (like OpenAI API key)
+dev_assist configure
+
+# Check version
+dev_assist version
+```
+
+## Features
+
+- Direct command-line interface for quick access to Dev Assist's capabilities
+- Powered by GPT-4 for intelligent assistance
+- Rich terminal output with syntax highlighting and formatting
+- Built-in tools for:
+  - File operations (read/write)
+  - Code search and analysis
+  - System command execution
+  - File listing and searching
+  - Code definition analysis
+
+## Configuration
+
+On first use, Dev Assist will prompt you for your OpenAI API key. This will be stored securely in `~/.dev_assist/.env`. You can reconfigure at any time using:
+
+```bash
+dev_assist configure
+```
+
+## Examples
+
+1. Get help with code:
+```bash
+dev_assist ask "How do I read a JSON file in Python?"
+```
+
+2. Search for patterns in code:
+```bash
+dev_assist ask "Find all TODO comments in my project"
+```
+
+3. Get explanations:
+```bash
+dev_assist ask "Explain how this function works" < mycode.py
+```
+
+4. Create new files:
+```bash
+dev_assist ask "Create a Python script that downloads images from a URL"
+```
+
+## Environment Variables
+
+- `OPENAI_API_KEY`: Your OpenAI API key (will be prompted if not set)
+- `DEV_ASSIST_DEBUG`: Set to "1" for debug output
+- `DEV_ASSIST_CONFIG_DIR`: Override default config directory (default: ~/.dev_assist)
+
+## Development
+
+To contribute to Dev Assist:
+
+1. Fork the repository
+2. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # or `venv\Scripts\activate` on Windows
+```
+
+3. Install development dependencies:
+```bash
+pip install -e ".[dev]"
+```
+
+4. Make your changes and submit a pull request
+
+## Troubleshooting
+
+1. If you see permission errors:
+```bash
+# Install for current user only
+pip install --user dev-assist
+```
+
+2. If the command isn't found:
+```bash
+# Make sure your Python scripts directory is in PATH
+# Usually one of:
+# - Windows: %APPDATA%\Python\Scripts
+# - Unix: ~/.local/bin
+```
+
+## License
+
+MIT License - feel free to use in your own projects.
+
+## Credits
+
+Created by Hillary Murefu (hillarywang2005@gmail.com)

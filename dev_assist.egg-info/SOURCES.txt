@@ -1,0 +1,11 @@
+README.md
+setup.py
+dev_assist/__init__.py
+dev_assist/cli.py
+dev_assist/tools.py
+dev_assist.egg-info/PKG-INFO
+dev_assist.egg-info/SOURCES.txt
+dev_assist.egg-info/dependency_links.txt
+dev_assist.egg-info/entry_points.txt
+dev_assist.egg-info/requires.txt
+dev_assist.egg-info/top_level.txt

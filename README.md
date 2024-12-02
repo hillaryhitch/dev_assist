@@ -52,7 +52,7 @@ dev_assist ask "How do I implement a binary search tree in Python?"
 
 ## Detailed Documentation
 
-- [Dev Assist CLI Documentation](dev_assist/README.md)
+- [Dev Assist CLI Documentation](dev_assist/README2.md)
 - [Claude API Wrapper Documentation](claude_api/README.md)
 
 ## Development
